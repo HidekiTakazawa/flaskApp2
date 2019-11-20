@@ -1,0 +1,27 @@
+<html>
+ <head>
+   <title>databaseRead form</title>
+   <link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
+ </head>
+ <body>
+   <div id="container">
+     <div class="pagetitle">
+       <h1>database read</h1>
+     </div>
+     <div id="main">
+       <p>Thanks for your submission, {{name2}}!</p>
+       <p>Here's a review of the information that you sent:</p>
+       <p>message: {{message}} </p>
+       <p>
+          <strong>Name</strong>: {{name2}} <br>
+          <strong>Email</strong>: {{email2}} <br>
+          <strong>PassWord</strong>: {{password2}}
+          
+       </p>
+       <form action="{{ url_for('toppage') }}">
+         <input type="submit" value="Back to TopPage">
+       </form>
+     </div>
+   </div>
+ </body>
+</html>

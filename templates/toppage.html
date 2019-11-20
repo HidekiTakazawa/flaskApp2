@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Submit a form</title>
+   <link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
+  </head>
+  <body>
+    <div id="container">
+      <div class="pagetitle">
+        <h1>Submit a form</h1>
+      </div>
+      <div id="main">
+        <form method="post" action="{{ url_for('database_new') }}">
+          <label for="name">Name:</label>
+          <input type="text" name="name"><br />
+          <label for="email">Email address:</label>
+          <input type="email" name="email"><br />
+          <label for="password">password:</label>
+          <input type="password" name="password"><br />
+         
+          <input type="submit" name="add""  value="追加">
+          
+          
+          
+        </form>
+	<hr>
+        
+      </div>
+      <form method="POST" action="{{ url_for('database_read') }}">
+          <label for="name">Name:</label>
+          <input type="text" name="name2"><br />
+          <label for="password">password:</label>
+          <input type="password" name="password2"><br />
+          <input type="submit" name="read" value="読み取り">
+
+      </form>
+      <hr>
+      <form method="POST" action="{{ url_for('database_all') }}">
+          <input type="submit" name="alldisplay" value="全件表示">
+          
+
+      </form>
+      
+    </div>
+  </body>
+</html>
